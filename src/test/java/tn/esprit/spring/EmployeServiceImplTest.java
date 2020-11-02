@@ -21,6 +21,7 @@ public class EmployeServiceImplTest {
 	
 	@Autowired
 	IEmployeService emp;
+	
 	@Test
 	public void testaddOrUpdateEmploye() throws ParseException {
 		
@@ -29,12 +30,12 @@ public class EmployeServiceImplTest {
 		assertEquals(ep.getId(), employeAddedID);
 		
 	}
+	
 	@Test
 	public void testgetAllEmployes() throws ParseException {
 		List<Employe> listEmployes = emp.getAllEmployes();
 		assertEquals(4, listEmployes.size());
 	}
-	
 	
 	@Test
 	public void testgetEmployePrenomById() throws ParseException {
